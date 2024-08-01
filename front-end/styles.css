@@ -11,7 +11,7 @@
 }
 
 body {
-    background-color: #ffffff;
+    background-color: #FAFAFA;;
     color: #333;
     height: 100vh;
     font-family: Arial, Helvetica, sans-serif;
@@ -85,7 +85,7 @@ nav a {
     padding: 10px;
 }
 
-.card {
+.place-card {
     border-radius: 5%;
     width: 100%;
     height: 100%;
@@ -93,16 +93,29 @@ nav a {
     padding: 15px;
     display: flex;
     flex-direction: column;
-    background-color: #ffffff;
+    background-color: #ffffff;    
 }
 
-.card-image {
+.link-wrapper{
+    text-decoration: none;
+    width: 100%;
+    height: 100%;
+}
+
+.image-wrapper {
     border: 1px solid #E6E6FA;
     height: 72%;
+    transition: transform 0.2s ease;
+    color: black;
+}
+
+.image-wrapper :hover {
+    transform: scale(1.02);
 }
 
 .card-content {
     height: 28%;
+    color: black;
 }
 
 .card-content h3 {
@@ -119,7 +132,6 @@ main {
     padding-right: 2rem;
     /* padding: 2rem; */
     height: 84%;
-
 }
 
 .top-section h2 {
@@ -129,9 +141,98 @@ main {
 
 footer {
     height: 6%;
-    background-color: #6EC5E9;;
+    background-color: #6EC5E9;
     text-align: center;
     font-weight: bold;
     align-items: center;
     padding: 20px;
 }
+
+/* Place Details */
+
+.place-details-main {
+    display: flex;
+    flex-direction: row;
+}
+
+.left-column {
+    width: 12.5%;
+}
+
+.middle-column {
+    width: 75%;
+    display: flex;
+    flex-direction: column;
+    margin-top: 30px;
+    text-align: center;
+}
+
+.middle-column h2 {
+    color: #FF2D55;
+    margin-left: 60px;
+}
+
+#place-details{
+    display: flex;
+    flex-direction: column;
+}
+
+.image-row {
+    padding: 60px;
+    display: flex;
+    flex-direction: row;
+}
+
+.first-image-col {
+    width: 40%;
+    height: 420px;
+}
+
+.second-image-col {
+    width: 60%;
+    height: 420px;
+    display: flex;
+    flex-direction: column;
+}
+
+.second-image-row{
+    height: 50%;
+    display: flex;
+    flex-direction: row;
+}
+
+.image-row-child{
+    width: 50%;
+}
+
+.about-place{
+    text-align: left;
+    padding-left: 55px;
+    display: flex;
+    flex-direction: row;
+    height: 100px;
+}
+
+.about-place-divs{
+    width: 50%;
+}
+
+#reviews{
+    text-align: left;
+    padding: 45px;
+}
+
+.reviews-card{
+    background-color: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    height: 150px;
+    align-items: center;
+    padding: 35px;
+}
+
+div button :hover{
+    background-color: lightblue;
+}
+
+

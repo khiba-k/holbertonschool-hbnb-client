@@ -1,29 +1,149 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Place Details</title>
-    <link rel="stylesheet" href="styles.css">
-</head>
-<body>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <!-- Header -->
+    <header>
+      <div class="title">
+        <img src="./logo.png" alt="HBNB Logo" />
+      </div>
+      <nav class="nav-bar">
+        <a href="login.html" id="login-link">Login</a>
+      </nav>
+    </header>
     <main>
-        <section id="place-details">
-            <!-- Place details will be populated dynamically -->
-        </section>
-        <section id="reviews">
-            <!-- Reviews will be populated dynamically -->
-        </section>
-        <section id="add-review">
-            <h2>Add a Review</h2>
+      <div class="place-details-main">
+        <!-- Left Column -->
+        <div class="left-column"></div>
+        <!-- Middle Column -->
+        <div class="middle-column">
+          <!-- Place Details -->
+          <h2>Beautiful Beach House</h2>
+          <section id="place-details">
+            <!-- Image Row -->
+            <div class="image-row">
+              <div class="first-image-col">
+                <img
+                  style="height: 420px; width: 450px; border-radius: 10px"
+                  src="./house.jpg"
+                />
+              </div>
+              <div class="second-image-col">
+                <div class="second-image-row">
+                  <div class="image-row-child">
+                    <img
+                      style="height: 200px; width: 95%"
+                      src="./kitchen.jpg"
+                    />
+                  </div>
+                  <div class="image-row-child">
+                    <img
+                      style="height: 200px; width: 95%; border-radius: 10px"
+                      src="./bedroom.jpg"
+                    />
+                  </div>
+                </div>
+                <div class="second-image-row">
+                  <div class="image-row-child">
+                    <img
+                      style="height: 200px; width: 95%"
+                      src="./bathroom.jpg"
+                    />
+                  </div>
+                  <div class="image-row-child">
+                    <img
+                      style="height: 200px; width: 95%; border-radius: 10px"
+                      src="./balcony.jpg"
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- About Place -->
+            <span class="about-place">
+              <div class="about-place-divs">
+                <p style="line-height: 160%">
+                  <span style="font-weight: bold">Location:</span> Maseru,
+                  Lesotho
+                </p>
+                <p style="line-height: 160%">
+                  <span style="font-weight: bold">Price Per Night:</span> M1800
+                </p>
+                <p style="line-height: 160%">
+                  <span style="font-weight: bold">Amenities:</span> Wifi, Pool,
+                  Air Conditioning
+                </p>
+              </div>
+              <div class="about-place-divs">
+                <p style="line-height: 160%">
+                  <span style="font-weight: bold">Host:</span> John Doe
+                </p>
+                <p style="line-height: 160%">
+                  <span style="font-weight: bold">Description:</span> A
+                  beautiful beach house with amazing views
+                </p>
+              </div>
+            </span>
+            <hr style="color: #ffff" />
+          </section>
+          <!-- Reviews -->
+          <section id="reviews">
+            <span style="text-align: center"
+              ><h2 style="padding-bottom: 30px">Reviews</h2></span
+            >
+            <div class="reviews-card">
+              <p style="font-weight: bold; line-height: 120%">
+                Sheldon Cooper:
+              </p>
+              <p style="line-height: 200%">The place was amazing</p>
+              <p style="line-height: 200%">Rating: ****</p>
+            </div>
+            <br />
+            <div class="reviews-card">
+              <p style="font-weight: bold; line-height: 120%">
+                Leonard Hofstader:
+              </p>
+              <p style="line-height: 200%">Views are to die for</p>
+              <p style="line-height: 200%">Rating: *****</p>
+            </div>
+          </section>
+          <hr style="color: #ffff" />
+          <section
+            style="text-align: center; padding-bottom: 100px"
+            id="add-review"
+          >
+            <h2 style="padding-bottom: 30px; padding-top: 50px">
+              Add a Review
+            </h2>
             <form id="review-form">
-                <label for="review-text">Review:</label>
-                <textarea id="review-text" name="review-text" required></textarea>
-                
-                <button type="submit">Submit</button>
+              <textarea
+                style="
+                  border: none;
+                  border-radius: 10px;
+                  width: 90%;
+                  height: 100px;
+                "
+                id="review-text"
+                name="review-text"
+                required
+              ></textarea>
+
+              <div style="padding-top: 20px">
+                <button style="width: 80px; height: 50px;border-radius: 5px; background-color: #6EC5E9; color: white; font-weight: bold; border: 2px solid lightblue;" type="submit">Submit</button>
+              </div>
             </form>
-        </section>
+          </section>
+        </div>
+        <div class="right-column"></div>
+      </div>
+      <footer>&copy 2024 HBnB Evolution. All rights reserved.</footer>
     </main>
+    <!-- footer -->
     <script src="scripts.js"></script>
-</body>
+  </body>
 </html>
