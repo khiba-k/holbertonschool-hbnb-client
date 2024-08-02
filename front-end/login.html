@@ -1,24 +1,38 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login</title>
     <link rel="stylesheet" href="styles.css">
 </head>
+
 <body>
-    <main>
-        <form id="login-form">
-            <h2>Login</h2>
-            <label for="email">Email:</label>
-            <input type="email" id="email" name="email" required>
-            
-            <label for="password">Password:</label>
-            <input type="password" id="password" name="password" required>
-            
-            <button type="submit">Login</button>
-        </form>
+    <main style="padding: 0px;">
+        <div class="login-main">
+            <div class="login-col">
+                <span style="text-align: left; padding: 50px;"><img src="logo.png" alt="logo"/></span>
+                <form style="padding-top: 150px" id="login-form">
+                    <h2>Login</h2>
+
+                    <div style="line-height: 180%;">
+                        <input  style="border-radius: 5px; height: 25px; width: 230px; padding-left: 10px; border: 1px solid lightgray;" placeholder="email" type="email" id="email" name="email" required>
+                    </div>
+                    <div style="line-height: 180%;">
+                        <input style="border-radius: 5px; height: 25px; width: 230px; padding-left: 10px; border: 1px solid lightgray;" type="password" placeholder="password" id="password" name="password" required>
+                    </div>
+                    <div style="line-height: 280%;"><button style="border-radius: 5px; height: 25px; width: 230px; border: 1px solid lightgray;" type="submit">Login</button></div>
+                    
+                </form>
+            </div>
+            <div class="image-col">
+                <div class="text-overlay">Your Home Away From Home, Wherever You Roam!</div>
+                <img style="width: 100%; height: 100%;" src="login.jpg" src="Welcome to HBnB" />
+            </div>
+        </div>
     </main>
     <script src="scripts.js"></script>
 </body>
+
 </html>

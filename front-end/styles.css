@@ -235,4 +235,34 @@ div button :hover{
     background-color: lightblue;
 }
 
+/* login page styling */
 
+.login-main{
+    display: flex;
+    flex-direction: row;
+    height: 100vh;
+    width: 100%;
+}
+
+.login-col {
+    width: 37%;
+    text-align: center;
+    align-items: center;
+}
+
+.image-col{
+    width: 67%;
+}
+
+.text-overlay {
+    position: absolute;
+    top: 18%;
+    left: 60%;
+    transform: translate(-50%, -50%);
+    color: white;
+    /* background-color: rgba(0, 0, 0, 0.5); Optional: Add background color with transparency */
+    padding: 10px;
+    border-radius: 5px;
+    font-size: 35px;
+    text-align: center;
+}
