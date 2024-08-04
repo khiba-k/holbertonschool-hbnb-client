@@ -17,6 +17,9 @@ with open('data/users.json') as f:
 with open('data/places.json') as f:
     places = json.load(f)
 
+with open("data/countries.json") as f:
+    countries = json.load(f)
+
 # In-memory storage for new reviews
 new_reviews = []
 
@@ -98,6 +101,14 @@ def add_review(place_id):
 
     new_reviews.append(new_review)
     return jsonify({"msg": "Review added"}), 201
+
+@app.route('/countries', methods=['GET'])
+def getCountries():
+    response = {
+        "code": [country['code'] for country in countries]
+    }
+
+    return jsonify(response)
 
 if __name__ == '__main__':
     app.run(debug=True)
