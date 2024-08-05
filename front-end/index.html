@@ -10,10 +10,10 @@
     <!-- Header -->
     <header>
       <div class="title">
-        <img src="./logo.png" alt="HBNB Logo" />
+        <img src="./assets/logo.png" alt="HBNB Logo" />
       </div>
       <nav class="nav-bar">
-        <a href="login.html" id="login-link">Login</a>
+        <a href="./login.html" id="login-link">Login</a>
       </nav>
     </header>
     <!-- Main -->
@@ -22,6 +22,7 @@
       <div class="top-row">
         <div class="top-section">
           <h2>Available Places</h2>
+          <div id="temp"></div>
           <section id="filter">
             <label for="country-filter" style="line-height: 200%"
               >Filter by Country:</label
@@ -30,13 +31,13 @@
               <!-- Options will be populated dynamically -->
             </select>
           </section>
-          <section id="places-list">
+          <!-- <section id="places-list"> -->
             <!-- List of places will be populated dynamically -->
-          </section>
+          <!-- </section> -->
         </div>
       </div>
       <!-- Bottom Row -->
-      <div class="bottom-row">
+      <div id="places-list" class="bottom-row">
         <!-- Child Rows -->
         <!-- Upper Child Row -->
         <div class="child-row">
@@ -111,8 +112,8 @@
             </a>
           </div>
         </div>
-        <!-- Middle Child Row -->
-        <div class="child-row">
+        <!-- Middle Child Row  -->
+       <div class="child-row">
           <div class="child-row-col">
             <a class="link-wrapper" href="./place.html">
               <div class="place-card">
@@ -185,7 +186,7 @@
           </div>
         </div>
         <!-- Lower Child Row -->
-        <div class="child-row">
+         <div class="child-row">
           <div class="child-row-col">
             <a class="link-wrapper" href="./place.html">
               <div class="place-card">
@@ -256,7 +257,7 @@
               </div>
             </a>
           </div>
-        </div>
+        </div> 
       </div>
     </main>
     <!-- footer -->

@@ -10,10 +10,11 @@
     <!-- Header -->
     <header>
       <div class="title">
-        <img src="./logo.png" alt="HBNB Logo" />
+        <img src="./assets/logo.png" alt="HBNB Logo" />
       </div>
       <nav class="nav-bar">
-        <a href="login.html" id="login-link">Login</a>
+        <a href="./login.html" id="login-link">Login</a>
+        <div id="temp"></div>
       </nav>
     </header>
     <main>
@@ -23,14 +24,14 @@
         <!-- Middle Column -->
         <div class="middle-column">
           <!-- Place Details -->
-          <h2>Beautiful Beach House</h2>
-          <section id="place-details">
+          <h2 id="place-name">Beautiful Beach House</h2>
+          <div id="place-details">
             <!-- Image Row -->
             <div class="image-row">
               <div class="first-image-col">
                 <img
                   style="height: 420px; width: 450px; border-radius: 10px"
-                  src="./house.jpg"
+                  src="./assets/house.jpg"
                 />
               </div>
               <div class="second-image-col">
@@ -38,13 +39,13 @@
                   <div class="image-row-child">
                     <img
                       style="height: 200px; width: 95%"
-                      src="./kitchen.jpg"
+                      src="./assets/kitchen.jpg"
                     />
                   </div>
                   <div class="image-row-child">
                     <img
                       style="height: 200px; width: 95%; border-radius: 10px"
-                      src="./bedroom.jpg"
+                      src="./assets/bedroom.jpg"
                     />
                   </div>
                 </div>
@@ -52,13 +53,13 @@
                   <div class="image-row-child">
                     <img
                       style="height: 200px; width: 95%"
-                      src="./bathroom.jpg"
+                      src="./assets/bathroom.jpg"
                     />
                   </div>
                   <div class="image-row-child">
                     <img
                       style="height: 200px; width: 95%; border-radius: 10px"
-                      src="./balcony.jpg"
+                      src="./assets/balcony.jpg"
                     />
                   </div>
                 </div>
@@ -68,29 +69,33 @@
             <span class="about-place">
               <div class="about-place-divs">
                 <p style="line-height: 160%">
-                  <span style="font-weight: bold">Location:</span> Maseru,
-                  Lesotho
+                  <span style="font-weight: bold">Location:</span>
+                  <span id="place-location">Lesotho</span>
                 </p>
                 <p style="line-height: 160%">
-                  <span style="font-weight: bold">Price Per Night:</span> M1800
+                  <span style="font-weight: bold">Price Per Night:</span>
+                  <span id="place-price">M1800</span>
                 </p>
                 <p style="line-height: 160%">
-                  <span style="font-weight: bold">Amenities:</span> Wifi, Pool,
-                  Air Conditioning
+                  <span style="font-weight: bold">Amenities:</span> <span id="place-amenities">Wifi, Pool,
+                    Air Conditioning</span>
                 </p>
               </div>
               <div class="about-place-divs">
                 <p style="line-height: 160%">
-                  <span style="font-weight: bold">Host:</span> John Doe
+                  <span style="font-weight: bold">Host:</span>
+                  <span id="place-host">John Doe</span>
                 </p>
                 <p style="line-height: 160%">
-                  <span style="font-weight: bold">Description:</span> A
-                  beautiful beach house with amazing views
+                  <span style="font-weight: bold">Description:</span>
+                  <span id="place-description"
+                    >A beautiful beach house with amazing views</span
+                  >
                 </p>
               </div>
             </span>
             <hr style="color: #ffff" />
-          </section>
+          </div>
           <!-- Reviews -->
           <section id="reviews">
             <span style="text-align: center"
@@ -134,7 +139,20 @@
               ></textarea>
 
               <div style="padding-top: 20px">
-                <button style="width: 80px; height: 50px;border-radius: 5px; background-color: #6EC5E9; color: white; font-weight: bold; border: 2px solid lightblue;" type="submit">Submit</button>
+                <button
+                  style="
+                    width: 80px;
+                    height: 50px;
+                    border-radius: 5px;
+                    background-color: #6ec5e9;
+                    color: white;
+                    font-weight: bold;
+                    border: 2px solid lightblue;
+                  "
+                  type="submit"
+                >
+                  Submit
+                </button>
               </div>
             </form>
           </section>
@@ -144,6 +162,36 @@
       <footer>&copy 2024 HBnB Evolution. All rights reserved.</footer>
     </main>
     <!-- footer -->
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        // Retrieve the place details from localStorage
+        const placeDetails = JSON.parse(localStorage.getItem("placeDetails"));
+        console.log(placeDetails);
+        if (placeDetails) {
+          // Display place details in the element with ID "kamohelo"
+          const placeName = document.getElementById("place-name");
+          const placeLocation = document.getElementById("place-location");
+          const placePrice = document.getElementById("place-price");
+          const placeAmenities = document.getElementById("place-amenities");
+          const placeHost = document.getElementById("place-host");
+          const placeDescription = document.getElementById("place-description");
+
+          if (placeLocation) {
+            placeName.textContent = placeDetails.place-name;
+            placeLocation.textContent = `${placeDetails.city_name}, ${placeDetails.country_name}`;
+            placePrice.textContent = `$${placeDetails.price_per_night}`;
+            placeAmenities.textContent = placeDetails.amenities;
+            placeHost.textContent = placeDetails.host_name;
+            placeDescription.textContent = placeDetails.description;
+          }
+
+          // // Optionally, you can remove the item from localStorage if it's no longer needed
+          // localStorage.removeItem("placeDetails");
+        } else {
+          console.error("No place details found in localStorage.");
+        }
+      });
+    </script>
     <script src="scripts.js"></script>
   </body>
 </html>
